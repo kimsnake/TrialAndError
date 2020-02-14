@@ -1,0 +1,9 @@
+깃허브 저장소 URL이 변경되었을 경우에 URL을 변경하는 방법을 서술한다
+
+기존 깃허브 저장소 URL 확인
+ - git remote -v
+ 
+깃허브 저장소 URL 변경
+ - git remote set-url origin 변경URL
+ 
+ 
