@@ -3,4 +3,4 @@
 
 ## 목차
 - git 관련 내역
- [gitURLchange](https://github.com/kimsnake/TrialAndError/blob/master/gitURLchange, "gitURLchange link")
+ [gitURLchange](https://github.com/kimsnake/TrialAndError/blob/master/gitURLchange)
