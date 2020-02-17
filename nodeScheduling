@@ -1,0 +1,29 @@
+setTimeout은 일정 시간 간격 이후에 함수가 한번 실행됩니다.
+setInterval은 일정 시간 간격으로 함수가 주기적으로 실행됩니다.
+
+
+let timerId = setTimeout(func|code, [delay], [arg1], [arg2], ...);
+
+파라미터:
+func|code
+실행을 위한 함수나 문자열입니다. 주로, 함수를 받습니다. 히스토리적인 이유로, 코드의 문자열도 넘겨질수 있지만 권장되지는 않습니다.
+
+delay
+실행하기 전의 딜레이 입니다. ms단위로 이루어져 있습니다. 1000ms = 1s 입니다. 디폴트 값은 0이 들어있습니다.
+
+arg1, arg2...
+함수에 대한 인자(Arguments)들입니다. (IE9 미만의 버전에서는 지원되지 않습니다.)
+
+function sayHi() {
+  console.log("hi")
+}
+
+// Wrong!
+setTimeout(sayHi(), 1000);
+
+setTimeout은 함수로의 참조를 받아올 것이라 예상했기 때문입니다. 
+여기 sayHi()는 함수를 실행시킵니다 그리고 실행의 결과가 setTimeout으로 전달됩니다. 
+우리가 코딩했던 것들을 살펴봤을 때, sayHi()의 결과는 undefined (아무것도 리턴하지 않는 함수)입니다.
+그러므로 아무것도 스케쥴되지 않습니다.
+
+출처 : https://velog.io/@jakeseo_me/%EC%9E%90%EB%B0%94%EC%8A%A4%ED%81%AC%EB%A6%BD%ED%8A%B8-%EA%B0%9C%EB%B0%9C%EC%9E%90%EB%9D%BC%EB%A9%B4-%EC%95%8C%EC%95%84%EC%95%BC-%ED%95%A0-33%EA%B0%80%EC%A7%80-%EA%B0%9C%EB%85%90-10-%EC%8A%A4%EC%BC%80%EC%A5%B4%EB%A7%81-setTimeout-%EA%B3%BC-setInterval-y6juukjsey
